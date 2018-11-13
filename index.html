@@ -4,9 +4,20 @@
     <meta charset="utf-8">
     <title>workshops today for your better tomorrow</title>
     <style media="screen">
+      @font-face {
+        font-family: "Inter UI";
+        font-weight: 500;
+        font-style: normal;
+        src: url("assets/Inter-UI-Medium.woff2") format("woff2"),
+          url("assets/Inter-UI-Medium.woff") format("woff");
+      }
+
       body {
         margin: 0;
         padding: 1em 1.5em 3em;
+        font-family: 'Inter UI';
+        font-weight: 500;
+        line-height: 1.35;
       }
 
       a {
@@ -27,7 +38,7 @@
       article {
         position: relative;
         display: block;
-        padding: 1em;
+        padding: 1.25em;
         background: white;
         max-width: 30em;
         padding-bottom: 2em;
@@ -54,7 +65,7 @@
         color: transparent;
         height: 3.5em;
         margin: 0 0.1em 2em 0;
-        background: url(./ppp.svg) top right;
+        background: url("./ppp.svg") top right;
         background-size: contain;
         background-repeat: no-repeat;
         user-select: none;
@@ -66,12 +77,11 @@
 
       .button {
         display: inline-block;
-        border: 2px solid;
+        border: 1.5px solid;
         padding: 0.75em 1.2em 0.9em;
         border-radius: 50%;
         box-shadow: 0 2px 0;
         text-transform: lowercase;
-        font-weight: bold;
         margin: 1em 0;
       }
 
