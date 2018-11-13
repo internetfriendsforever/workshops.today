@@ -2,257 +2,194 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>workshops.today</title>
+    <title>workshops today for your better tomorrow</title>
     <style media="screen">
-      * {
-        box-sizing: border-box;
-      }
-      body, html {
-        height: 100%;
+      body {
         margin: 0;
-        color: rgba(255, 255, 255, 0.5);
-        /* color: darkgreen; */
+        padding: 1em 1.5em 3em;
       }
-      header {
-        text-align: center;
-        padding-bottom: 1em;
+
+      a {
+        color: blue;
+        text-decoration: none;
       }
-      h1 {
-        letter-spacing: -0.03em;
-        word-spacing: -0.08em;
-        color: darkgoldenrod;
-        line-height: 1;
-        font-family: times, "times new roman", serif;
-        /* margin: 0; */
+
+      a:hover {
+        text-decoration: underline;
       }
-      p {
-        margin: 0;
-        font-family: "arial narrow", sans-serif;
-      }
-      .wrapper {
+
+      canvas {
         position: absolute;
-        z-index: 1;
         top: 0;
-        right: 0;
-        bottom: 0;
         left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
+      }
+
+      article {
+        position: relative;
+        display: block;
         padding: 1em;
+        background: white;
+        max-width: 30em;
+        padding-bottom: 2em;
       }
-      .top {
-        align-self: flex-start;
+
+      header {
+        margin-bottom: 4em;
+        color: tomato;
       }
-      .bottom {
-        align-self: flex-end;
+
+      header time {
+        display: block;
+      }
+
+      footer {
+        margin-top: 2em;
+      }
+
+      mark {
+        cursor: wait;
+      }
+
+      h1 {
+        color: transparent;
+        height: 3.5em;
+        margin: 0 0.1em 2em 0;
+        background: url(./ppp.svg) top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        user-select: none;
+      }
+
+      p {
+        max-width: 24em;
+      }
+
+      .button {
+        display: inline-block;
+        border: 2px solid;
+        padding: 0.75em 1.2em 0.9em;
+        border-radius: 50%;
+        box-shadow: 0 2px 0;
+        text-transform: lowercase;
+        font-weight: bold;
+        margin: 1em 0;
+      }
+
+      .button:hover {
+        text-decoration: none;
+        color: tomato;
+      }
+
+      .button:active {
+        background: yellow;
+      }
+
+      @media (min-width: 34em) {
+        h1 {
+          float: right;
+          width: 8em;
+        }
+
+        header {
+          margin-bottom: 7em;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="top">
-        <p>internetfriendsforever</p>
-      </div>
+    <article>
+      <h1>posters, patterns, programs</h1>
 
       <header>
-        <h1>
-          workshops today for your<br />
-          better tomorrow
-        </h1>
-        <p>
-          10–16 December 2018<br />
+        <time>10–16 December 2018</time>
+
+        <a href="https://goo.gl/maps/KiWHqo2C8V72" target="_blank" rel="noopener noreferrer">
           Low Standards<br />
-          Pløens gate, Oslo
-        </p>
+          Pløens gate 1<br />
+          Youngstorget, Oslo
+        </a>
       </header>
 
-      <div class="bottom">
-        <p>cyberspace·industries</p>
-      </div>
-    </div>
+      <p>A two-day <mark title="10–11 December">workshop</mark> + <mark title="13–16 December">exhibition</mark> introducing programming as a visual design tool</p>
 
-    <script src="https://unpkg.com/gl-matrix@2.4.0/dist/gl-matrix.js"></script>
-    <script src="kefir.min.js"></script>
+      <p>Participants will be introduced to coding concepts like variables, loops, drawing functions, coordinate systems and parameters</p>
+
+      <p>Together, we will explore waves, rhythm and contrast through repetition of <mark title=" ▲ ◼ ● ">elementary graphic forms</mark></p>
+
+      <p>The work will be printed on A2 posters and exhibited at the end of the week alongside the code used to produce it. All participants will receive a copies of the work</p>
+
+      <p>
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeeJPuCk8S336GSTFb1sKI3j87B53cX-nb1fbl1Eg5mTf2tyQ/viewform" target="_blank" rel="noopener noreferrer">
+          Apply for the workshop
+        </a>
+      </p>
+
+      <p>No prior programming experience required</p>
+
+      <p>Participants will be selected based on group diversity (no particular expertise in any particular field required)</p>
+
+      <p>Price: TBA (hopefully it will be fully covered by grants)</p>
+
+      <footer>
+        <a href="http://internetfriendsforever.com" target="_blank" rel="noopener noreferrer">
+          <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 145 164" fill='blue'>
+            <path d="M80.5 39l14.1 14.1c1.4 1.4 3.5 1.4 4.9 0L113.6 39c1.4-1.4 3.5-1.4 4.9 0l15.1 15.1c1.4 1.4 1.4 3.5 0 4.9l-14.1 14.1c-1.4 1.4-1.4 3.5 0 4.9l24.6 24.6c1.4 1.4 1.4 3.5 0 4.9L127.4 124c-1.4 1.4-3.5 1.4-4.9 0L97.9 99.5c-1.4-1.4-1.4-3.5 0-4.9L112 80.5c1.4-1.4 1.4-3.5 0-4.9L97 60.5c-1.4-1.4-3.5-1.4-4.9 0L78 74.6c-1.4 1.4-3.5 1.4-4.9 0L59 60.5c-1.4-1.4-1.4-3.5 0-4.9l14.1-14.1c1.4-1.4 1.4-3.5 0-4.9L59 22.5c-1.4-1.4-1.1-3.8.2-5.1L75.6 1C77-.4 79.1-.4 80.5 1l14.1 14.1c1.4 1.4 1.4 3.5 0 4.9L80.5 34.1c-1.4 1.4-1.4 3.6 0 4.9zM19.1 62.4l82.5 82.5c1.4 1.4 1.4 3.5 0 4.9L88.4 163c-1.4 1.4-3.5 1.4-4.9 0L1 80.5C-.4 79.1-.4 77 1 75.6l13.2-13.2c1.3-1.3 3.5-1.3 4.9 0z"></path>
+          </svg>
+        </a>
+      </footer>
+    </article>
 
     <script>
       const canvas = document.createElement('canvas')
       const context = canvas.getContext('2d')
 
-      const load = Kefir.fromEvents(window, 'load')
+      function render () {
+        const width = document.body.clientWidth * window.devicePixelRatio
+        const height = document.body.clientHeight * window.devicePixelRatio
 
-      const time = Kefir.stream(emitter => (
-        function tick (time = 0) {
-          emitter.emit(time)
-          window.requestAnimationFrame(tick)
-        }
-      )()).toProperty(() => 0)
+        canvas.width = width
+        canvas.height = height
 
-      const vectors = Kefir.constant(
-        Array(20).fill().map(() => (
-          vec3.fromValues(
-            (Math.random() - 0.5) * 2,
-            (Math.random() - 0.5) * 2,
-            (Math.random() - 0.5) * 2
-          )
-        ))
-      )
+        canvas.style.width = `100%`
+        canvas.style.height = `${height / window.devicePixelRatio}px`
 
-      const shapes = Kefir.constant(Array(2).fill().map((v, i, arr) => {
-        const model = mat4.rotateY(mat4.create, mat4.identity(mat4.create()), (i / arr.length) * Math.PI)
+        document.body.insertBefore(canvas, document.body.childNodes[0])
 
-        return [
-          vec3.transformMat4(vec3.create(), vec3.fromValues(-0.5, -0.5, 0), model),
-          vec3.transformMat4(vec3.create(), vec3.fromValues(0.5, -0.5, 0), model),
-          vec3.transformMat4(vec3.create(), vec3.fromValues(0.5, 0.5, 0), model),
-          vec3.transformMat4(vec3.create(), vec3.fromValues(-0.5, 0.5, 0), model)
-        ]
-      }))
+        const grid = 50
 
-      const getSize = () => ({
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
+        context.globalCompositeOperation = 'multiply'
+        context.fillStyle = 'blue'
 
-      const size = Kefir.fromEvents(window, 'resize')
-        .map(getSize)
-        .toProperty(getSize)
+        for (let col = 0; col < width / grid; col += 1) {
+          for (let row = 0; row < height / grid; row += 1) {
+            const x = col * grid
+            const y = row * grid + (col % 2) * grid / 2
+            const r = 10
 
-      const state = Kefir.combine(
-        [time, size, vectors, shapes],
-        (time, size, vectors, shapes) => ({ time, size, vectors, shapes })
-      )
-
-      const render = Kefir.combine([load, state], (load, state) => state)
-
-      load.observe(loaded => {
-        document.body.style.margin = 0
-        document.body.style.background = '#051112'
-        document.body.appendChild(canvas)
-        canvas.style.width = '100%'
-        canvas.style.height = '100%'
-      })
-
-      size.observe(size => {
-        canvas.width = window.innerWidth * window.devicePixelRatio
-        canvas.height = window.innerHeight * window.devicePixelRatio
-      })
-
-      render.observe(({ time, size, vectors, shapes }) => {
-        const phase = time / 20000
-        const base = mat4.fromValues(0.1, Math.sin(phase / 2) * 0.1, 0, 0, 0, 0.1, 0, 0, Math.sin(phase / 5) * 0.1, 0, 0.1, 0, 0, 0, 0, 0)
-        const view = mat4.lookAt(mat4.create(), vec3.fromValues(Math.sin(phase) * 1.5, Math.sin(phase / 5) * 1, Math.cos(phase) * 1.5), vec3.fromValues(0, 0, 0), vec3.fromValues(0, -1, 0))
-        const perspective = mat4.perspective(mat4.create(), Math.PI / 2000, 1, 0.01, 1000)
-        const baseView = mat4.multiply(mat4.create(), base, view)
-        const camera = mat4.multiply(mat4.create(), perspective, baseView)
-        const origin = vec3.transformMat4(vec3.create(), vec3.fromValues(0, 0, 0), camera)
-
-        context.clearRect(0, 0, canvas.width, canvas.height)
-        context.save()
-        context.translate(canvas.width / 2, canvas.height / 2)
-        context.lineWidth = window.devicePixelRatio
-
-        color('#ECC943')
-
-        for (let x = -2; x <= 2; x++) {
-          for (let y = -2; y <= 2; y++) {
-            for (let z = -2; z <= 2; z++) {
-              dot(vec3.transformMat4(vec3.create(), vec3.fromValues(x / 4, y / 4, z / 4), camera))
-            }
+            context.beginPath()
+            context.arc(x, y, r, 0, Math.PI * 2)
+            context.fill()
           }
         }
 
-        vectors.forEach(vector => {
-          const [x, y] = vec3.transformMat4(vec3.create(), vector, camera)
+        context.fillStyle = 'tomato'
 
-          color('#235154')
-          arrow(origin, [x, y])
+        for (let col = grid / 2; col < width; col += grid) {
+          for (let row = grid / 2; row < height; row += grid) {
+            const x = col + Math.sin(row / 8) * 10 + Math.sin(row / 10) * 20
+            const y = (row + Math.sin(col / 3) * 20)
+            const r = (row / 50) % 50
 
-          color('#C55C1B')
-          cross([x, y])
-        })
-
-        color('#666')
-        shapes.forEach(vertices => {
-          context.beginPath()
-
-          vertices.forEach((vertex, i) => {
-            const [x, y] = vec3.transformMat4(vec3.create(), vertex, camera)
-            context[i === 0 ? 'moveTo' : 'lineTo'](x, y)
-          })
-
-          context.closePath()
-          context.stroke()
-        })
-
-        color('red')
-        arrow(origin, vec3.transformMat4(vec3.create(), [base[0], base[1], base[2]], camera))
-
-        color('blue')
-        arrow(origin, vec3.transformMat4(vec3.create(), [base[4], base[5], base[6]], camera))
-
-        color('green')
-        arrow(origin, vec3.transformMat4(vec3.create(), [base[8], base[9], base[10]], camera))
-
-        context.restore()
-      })
-
-      // Helpers
-      function color (c) {
-        context.strokeStyle = c
-        context.fillStyle = c
+            context.beginPath()
+            context.arc(x, y, r, 0, Math.PI * 2)
+            context.fill()
+          }
+        }
       }
 
-      function arrow (from, to) {
-        const size = window.devicePixelRatio * 8
+      render()
 
-        line(from, to)
-
-        context.save()
-        context.translate(...to)
-        context.rotate(Math.atan2(to[1] - from[1], to[0] - from[0]))
-        context.beginPath()
-        context.moveTo(-size, -size / 2)
-        context.lineTo(0, 0)
-        context.lineTo(-size, size / 2)
-        context.fill()
-        context.restore()
-      }
-
-      function line (from, to) {
-        const [x1, y1] = from
-        const [x2, y2] = to
-        context.save()
-        context.beginPath()
-        context.moveTo(x1, y1)
-        context.lineTo(x2, y2)
-        context.stroke()
-        context.restore()
-      }
-
-      function dot ([x, y]) {
-        const size = window.devicePixelRatio * 1
-        context.beginPath()
-        context.arc(x, y, size, 0, Math.PI * 2)
-        context.fill()
-      }
-
-      function cross ([x, y]) {
-        const size = window.devicePixelRatio * 3
-        context.beginPath()
-        context.moveTo(x - size, y)
-        context.lineTo(x + size, y)
-        context.moveTo(x, y - size)
-        context.lineTo(x, y + size)
-        context.stroke()
-      }
-
-      function getAngle (a, b) {
-        return Math.atan2(a, b)
-      }
+      window.addEventListener('resize', render)
     </script>
   </body>
 </html>
