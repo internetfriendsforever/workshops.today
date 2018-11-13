@@ -47,7 +47,7 @@
       }
 
       mark {
-        cursor: wait;
+        cursor: help;
       }
 
       h1 {
@@ -145,7 +145,7 @@
 
       function render () {
         const width = document.body.clientWidth * window.devicePixelRatio
-        const height = document.body.clientHeight * window.devicePixelRatio
+        const height = Math.max(document.body.clientHeight, window.innerHeight) * window.devicePixelRatio
 
         canvas.width = width
         canvas.height = height
