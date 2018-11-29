@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>workshops today for your better tomorrow</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style media="screen">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style media='screen'>
       @font-face {
-        font-family: "Inter UI";
-        font-weight: 500;
-        font-style: normal;
-        src: url("assets/Inter-UI-Medium.woff2") format("woff2"),
-          url("assets/Inter-UI-Medium.woff") format("woff");
+        font-family: 'IFF Bruce'; /* Custom typeface by Ellmer Stefan */
+        src: url('assets/IFFBruce.ttf') format('truetype');
+        font-weight: 0 100;
+      }
+
+      @supports (font-variation-settings: normal) {
+        html {
+          font-family: 'IFF Bruce', sans-serif;
+          letter-spacing: -0.009em;
+        }
       }
 
       body {
         margin: 0;
         padding: 1em 1.5em 3em;
-        font-family: 'Inter UI';
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.35;
+        font-feature-settings: 'ss02' 0, 'ss03' 1;
+        font-variation-settings: 'wght' 43;
       }
 
       a {
@@ -74,7 +80,7 @@
         color: transparent;
         height: 3.5em;
         margin: 0 0.1em 2em 0;
-        background: url("assets/ppp.svg") top right;
+        background: url('assets/ppp.svg') top right;
         background-size: contain;
         background-repeat: no-repeat;
         user-select: none;
@@ -122,23 +128,23 @@
       <header>
         <time>10–16 December 2018</time>
 
-        <a href="https://goo.gl/maps/KiWHqo2C8V72" target="_blank" rel="noopener noreferrer">
+        <a href='https://goo.gl/maps/KiWHqo2C8V72' target='_blank' rel='noopener noreferrer'>
           Low Standards<br />
           Pløens gate 1<br />
           Youngstorget, Oslo
         </a>
       </header>
 
-      <p>A two-day <mark title="10–11 December">workshop</mark> + <mark title="13–16 December">exhibition</mark> introducing programming as a visual design tool</p>
+      <p>A two-day <mark title='10–11 December'>workshop</mark> + <mark title='13–16 December'>exhibition</mark> introducing programming as a visual design tool</p>
 
       <p>Participants will be introduced to coding concepts like variables, loops, drawing functions, coordinate systems and parameters</p>
 
-      <p>Together, we will explore waves, rhythm and contrast through repetition of <mark title=" ▲ ◼ ● ">elementary graphic forms</mark></p>
+      <p>Together, we will explore waves, rhythm and contrast through repetition of <mark title=' ▲ ◼ ● '>elementary graphic forms</mark></p>
 
       <p>The work will be printed on A2 posters and exhibited at the end of the week alongside the code used to produce it. All participants will receive copies of the work</p>
 
       <p>
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeeJPuCk8S336GSTFb1sKI3j87B53cX-nb1fbl1Eg5mTf2tyQ/viewform" target="_blank" rel="noopener noreferrer">
+        <a class='button' href='https://docs.google.com/forms/d/e/1FAIpQLSeeJPuCk8S336GSTFb1sKI3j87B53cX-nb1fbl1Eg5mTf2tyQ/viewform' target='_blank' rel='noopener noreferrer'>
           Apply for the workshop
         </a>
       </p>
@@ -150,9 +156,9 @@
       <p>Price: TBA (hopefully it will be fully covered by grants)</p>
 
       <footer>
-        <a href="http://internetfriendsforever.com" target="_blank" rel="noopener noreferrer">
-          <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 145 164" fill='blue'>
-            <path d="M80.5 39l14.1 14.1c1.4 1.4 3.5 1.4 4.9 0L113.6 39c1.4-1.4 3.5-1.4 4.9 0l15.1 15.1c1.4 1.4 1.4 3.5 0 4.9l-14.1 14.1c-1.4 1.4-1.4 3.5 0 4.9l24.6 24.6c1.4 1.4 1.4 3.5 0 4.9L127.4 124c-1.4 1.4-3.5 1.4-4.9 0L97.9 99.5c-1.4-1.4-1.4-3.5 0-4.9L112 80.5c1.4-1.4 1.4-3.5 0-4.9L97 60.5c-1.4-1.4-3.5-1.4-4.9 0L78 74.6c-1.4 1.4-3.5 1.4-4.9 0L59 60.5c-1.4-1.4-1.4-3.5 0-4.9l14.1-14.1c1.4-1.4 1.4-3.5 0-4.9L59 22.5c-1.4-1.4-1.1-3.8.2-5.1L75.6 1C77-.4 79.1-.4 80.5 1l14.1 14.1c1.4 1.4 1.4 3.5 0 4.9L80.5 34.1c-1.4 1.4-1.4 3.6 0 4.9zM19.1 62.4l82.5 82.5c1.4 1.4 1.4 3.5 0 4.9L88.4 163c-1.4 1.4-3.5 1.4-4.9 0L1 80.5C-.4 79.1-.4 77 1 75.6l13.2-13.2c1.3-1.3 3.5-1.3 4.9 0z"></path>
+        <a href='http://internetfriendsforever.com' target='_blank' rel='noopener noreferrer'>
+          <svg id='logo' xmlns='http://www.w3.org/2000/svg' width='1em' viewBox='0 0 145 164' fill='blue'>
+            <path d='M80.5 39l14.1 14.1c1.4 1.4 3.5 1.4 4.9 0L113.6 39c1.4-1.4 3.5-1.4 4.9 0l15.1 15.1c1.4 1.4 1.4 3.5 0 4.9l-14.1 14.1c-1.4 1.4-1.4 3.5 0 4.9l24.6 24.6c1.4 1.4 1.4 3.5 0 4.9L127.4 124c-1.4 1.4-3.5 1.4-4.9 0L97.9 99.5c-1.4-1.4-1.4-3.5 0-4.9L112 80.5c1.4-1.4 1.4-3.5 0-4.9L97 60.5c-1.4-1.4-3.5-1.4-4.9 0L78 74.6c-1.4 1.4-3.5 1.4-4.9 0L59 60.5c-1.4-1.4-1.4-3.5 0-4.9l14.1-14.1c1.4-1.4 1.4-3.5 0-4.9L59 22.5c-1.4-1.4-1.1-3.8.2-5.1L75.6 1C77-.4 79.1-.4 80.5 1l14.1 14.1c1.4 1.4 1.4 3.5 0 4.9L80.5 34.1c-1.4 1.4-1.4 3.6 0 4.9zM19.1 62.4l82.5 82.5c1.4 1.4 1.4 3.5 0 4.9L88.4 163c-1.4 1.4-3.5 1.4-4.9 0L1 80.5C-.4 79.1-.4 77 1 75.6l13.2-13.2c1.3-1.3 3.5-1.3 4.9 0z'></path>
           </svg>
         </a>
       </footer>
