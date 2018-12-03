@@ -1,6 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.html", "use": "@now/static" }
+    { "src": "index.html", "use": "@now/static" },
+    { "src": "assets/*.*", "use": "@now/static" }
   ]
 }
