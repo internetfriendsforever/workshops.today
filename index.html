@@ -94,13 +94,17 @@
         margin: 1em 0;
       }
 
-      .button:hover {
+      .button:hover:not(.disabled) {
         text-decoration: none;
         color: tomato;
       }
 
-      .button:active {
+      .button:active:not(.disabled) {
         background: yellow;
+      }
+
+      .button.disabled {
+        color: #aaa;
       }
 
       @media (min-width: 34em) {
@@ -138,9 +142,9 @@
       <p>The work will be printed on A2 posters and exhibited at the end of the week alongside the code used to produce it. All participants will receive a copies of the work</p>
 
       <p>
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeeJPuCk8S336GSTFb1sKI3j87B53cX-nb1fbl1Eg5mTf2tyQ/viewform" target="_blank" rel="noopener noreferrer">
-          Apply for the workshop
-        </a>
+        <div class="button disabled">
+          applications closed
+        </div>
       </p>
 
       <p>No prior programming experience required</p>
