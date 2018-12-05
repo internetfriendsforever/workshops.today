@@ -113,7 +113,7 @@ So, what is going on here?
 
 When we write `var canvas = ...`, we are declaring a _variable_. A variable is a reference to something. Like a name is for a person. Examples of things a variable can reference can be: numbers, text (strings), lists (arrays), elements, objects. In this case, we are creating a variable called `canvas`. You could call it almost anything, as long as it does not contain any spaces.
 
-When we write `document.createElement('canvas')`, the `document` part is a variable referencing the html document. The document object has many functions inside it, that we can use, for example creating elements.
+When we write `document.createElement('canvas')`, the `document` part is a variable referencing the _HTML document_. The `document` object has many functions inside it, that we can use, for example for creating elements.
 
 Let us try a metaphor:
 
