@@ -32,7 +32,7 @@ Download and install the following tools on your computer:
 
 ## JavaScript and the console
 
-1. We can use JavaScript in our document by adding a `script` element
+1. We can use JavaScript in our document by adding a `script` element:
 ```html
 <body>
   <script>
@@ -40,7 +40,8 @@ Download and install the following tools on your computer:
 </body>
 ```
 
-2. Go to the web browser and reload the page (nothing happens)
+3. Save
+2. Reload the page in the web browser (nothing happens)
 3. In order to see that the script is actually running, we can use the _console_. In Google Chrome: `View -> Developer -> JavaScript console` (keyboard shortcut `alt + cmd + j`)
 4. Write a message to the console:
 ```html
