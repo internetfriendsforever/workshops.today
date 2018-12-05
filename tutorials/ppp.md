@@ -32,7 +32,7 @@ Download and install the following tools on your computer:
 
 ## JavaScript and the console
 
-1. We can use JavaScript in our document using a `script` element
+1. We can use JavaScript in our document by adding a `script` element
 ```html
 <body>
   <script>
