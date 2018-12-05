@@ -12,7 +12,7 @@ Download and install the following tools on your computer:
 ## Create a HTML document
 
 1. Make a folder on your computer called `ppp`
-2. Open the folder you just created in the text editor
+2. Open the folder in the text editor
 3. Create a new file in `ppp` called `index.html`
   - Right-click `ppp` in the lef-hand column
   - Click `New file`
