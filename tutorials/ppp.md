@@ -15,7 +15,7 @@ Download and install the following tools on your computer:
 2. Open the folder in the text editor
 3. Create a new file in `ppp` called `index.html`
   - Right-click `ppp` in the lef-hand column
-  - Click `New file`
+  - Click _New file_
   - Type in `index.html` and press return on your keyboard
 4. Write the following into the right-hand column:
 
@@ -30,9 +30,9 @@ Download and install the following tools on your computer:
 7. Open the `index.html` file in the web browser
 8. You should see your HTML document presented in the web browser
 
-## JavaScript and the console
+## Writing our first program
 
-1. We can use JavaScript in our document by adding a `script` element:
+1. We can use _JavaScript_ in our document by adding a `script` element:
 ```html
 <body>
   <script>
@@ -99,6 +99,18 @@ To make something visual, we will draw on an element called `canvas`
 </body>
 ```
 
-TODO: Explain variables, functions and parameters
+4. Save, reload your browser and see a black square!
+
+So, what is going on here?
+
+When we write `var canvas = ...`, we are declaring a _variable_. A variable is a reference to something. Like a name is for a person. Examples of things a variable can reference can be: numbers, text (strings), lists (arrays), elements, objects. In this case, we are creating a variable called `canvas`. You could call it almost anything, as long as it does not contain any spaces.
+
+When we write `document.createElement('canvas')`, the `document` part is a variable referencing the html document. The document object has many functions inside it, that we can use, for example creating elements.
+
+Let us try a metaphor:
+
+Imagine the `document` to be a building. Inside the building, there are many different machines. There is a particular vending machine called `createElement`. We're interested in drawing, so we press the button that reads `canvas`. Moments later, the vending machine does what it does best, and vends a stretched canvas, fully assembled and ready for us to use!
+
+So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
 
 TODO: Explain html-javascript-canvas relationship (diagram?)
