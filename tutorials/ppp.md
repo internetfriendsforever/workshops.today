@@ -101,4 +101,14 @@ To make something visual, we will draw on an element called `canvas`
 
 TODO: Explain variables, functions and parameters
 
-TODO: Explain html-javascript-canvas relationship (diagram?)
+## HTML, JavaScript and Canvas – how do they relate?
+HTML is code used to describe content in a document, using a standard set of elements. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is _static_ – meaning the document doesn't change by itself. 
+
+The `script` element is a special element where we can write programs to dynamically change our document while it is open in a browser. These programs are written in a language called JavaScript, with it we can, amongst other things: 
+
+- create and manipulate document elements
+- do calculations
+- listen and react to user interaction 
+
+The `canvas` is a special element for generating graphics in a document.
+
