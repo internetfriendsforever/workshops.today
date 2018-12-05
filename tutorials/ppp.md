@@ -11,8 +11,6 @@ Download and install the following tools on your computer:
 
 ## Create an HTML document
 
-HTML is code used to describe a document. In it we use a standard set of _elements_. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is static – meaning the document doesn't change by itself. 
-
 1. Make a folder on your computer called `ppp`
 2. Open the folder in the text editor
 3. Create a new file in `ppp` called `index.html`
@@ -31,6 +29,8 @@ HTML is code used to describe a document. In it we use a standard set of _elemen
 6. Go to the `ppp` folder on your computer
 7. Open the `index.html` file in the web browser
 8. You should see your HTML document presented in the web browser
+
+HTML is code used to describe a document. In it we use a standard set of _elements_. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is static – meaning the document doesn't change by itself. 
 
 ## Writing our first program
 
