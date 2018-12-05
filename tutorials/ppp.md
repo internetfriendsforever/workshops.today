@@ -9,7 +9,9 @@ Download and install the following tools on your computer:
 - We write code using a _text editor_. You can use any plain text editor. In these tutorials we will be using  [Atom](https://atom.io/).
 - Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Google Chrome](https://www.google.com/chrome/). If you've already installed it, make sure it is up-to-date.
 
-## Create a HTML document
+## Create an HTML document
+
+HTML is code used to describe a document. In it we use a standard set of _elements_. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is static – meaning the document doesn't change by itself. 
 
 1. Make a folder on your computer called `ppp`
 2. Open the folder in the text editor
@@ -32,7 +34,13 @@ Download and install the following tools on your computer:
 
 ## Writing our first program
 
-1. We can use _JavaScript_ in our document by adding a `script` element:
+The `script` element is a special element where we can write programs to dynamically change our document while it is open in a browser. These programs are written in a language called JavaScript. With it we can (amongst other things): 
+
+- create and manipulate document elements
+- do calculations
+- listen and react to user interaction 
+
+1. Let's add a `script` element to our document:
 ```html
 <body>
   <script>
@@ -67,9 +75,9 @@ Let's make an error:
 
 ## Drawing on a canvas
 
-To make something visual, we will draw on an element called `canvas`
+To make something visual, we will draw on an element called `canvas`. It is a special element for generating graphics.
 
-1. Let's create a `canvas` element and add it to the document:
+1. Let's create a `canvas` element and add it to our document:
 
 ```javascript
 <body>
@@ -112,15 +120,3 @@ Let us try a metaphor:
 Imagine the `document` to be a building. Inside the building, there are many different machines. There is a particular vending machine called `createElement`. We're interested in drawing, so we press the button that reads `canvas`. Moments later, the vending machine does what it does best, and vends a stretched canvas, fully assembled and ready for us to use!
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
-
-## HTML, JavaScript and Canvas – how do they relate?
-HTML is code used to describe content in a document, using a standard set of elements. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is _static_ – meaning the document doesn't change by itself. 
-
-The `script` element is a special element where we can write programs to dynamically change our document while it is open in a browser. These programs are written in a language called JavaScript, with it we can, amongst other things: 
-
-- create and manipulate document elements
-- do calculations
-- listen and react to user interaction 
-
-The `canvas` is a special element for generating graphics in a document.
-
