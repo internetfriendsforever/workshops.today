@@ -120,3 +120,9 @@ Let us try a metaphor:
 Imagine the `document` to be a building. Inside the building, there are many different machines. There is a particular vending machine called `createElement`. We're interested in drawing, so we press the button that reads `canvas`. Moments later, the vending machine does what it does best, and vends a stretched canvas, fully assembled and ready for us to use!
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
+
+TODO: Draw more shapes (line, triangle), introduce coordinate system (and how arguments are used, xy, width, height etc.)
+
+TODO: Loops, grid
+
+TODO: Variations
