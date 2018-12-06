@@ -125,13 +125,13 @@ Imagine the `document` to be a building. Inside the building, there are many dif
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
 
+## Drawing more shapes 
+(line, triangle, circle), introduce coordinate system (and how arguments are used, xy, width, height etc.)
 TODO: Making copies of files
 
-## Drawing more shapes 
-(line, triangle), introduce coordinate system (and how arguments are used, xy, width, height etc.)
-
 ## Loops, grid
-loop-in-loop
+loop-in-loop,
+coordinate systems
 
 ## Variations
 Calcultations
