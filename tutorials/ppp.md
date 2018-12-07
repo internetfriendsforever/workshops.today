@@ -102,7 +102,8 @@ To make something visual, we will draw on an element called `canvas`. It is a sp
 
     document.body.appendChild(canvas)
 
-    context.fillRect(10, 10, 50, 50)
+    context.rect(10, 10, 50, 50)
+    context.fill()
   </script>
 </body>
 ```
@@ -117,6 +118,8 @@ When we write `var canvas = ...`, we are declaring a _variable_. A variable is a
 
 ### Functions
 
+When there's a word followed by round brackets `()`, it means that we're using a function.
+
 When we write `document.createElement('canvas')`, the `document` part is a variable referencing the _HTML document_. The `document` object has many functions that we can use, for example for creating elements.
 
 Let us try a metaphor:
@@ -125,13 +128,46 @@ Imagine the `document` to be a building. Inside the building, there are many dif
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
 
+#### Parameters
+
+Some functions require special instructions to do their job. In the case of `rect`, it needs to know what position and what size it should be. We give these instructions, or _parameters_ inside the round brackets.
+
+Parameters need to be sent in order, and for `rect` that happens to be `x, y, width, height`. 
+
+Writing `rect(10, 10, 50, 50)` is telling the function to start at position `10`, `10`, and make it `50` wide and `50` tall.
+
 ## Drawing more shapes 
-(line, triangle, circle), introduce coordinate system (and how arguments are used, xy, width, height etc.)
-TODO: Making copies of files
+
+We can draw more shapes by using a few other functions
+
+A line:
+```
+context.beginPath()
+context.moveTo(100, 0)
+context.lineTo(200, 100)
+context.stroke()
+```
+
+A triangle:
+```
+context.beginPath()
+context.moveTo(100, 50)
+context.lineTo(125, 100)
+context.lineTo(75, 100)
+context.closePath()
+context.stroke()
+```
+
+A circle:
+```
+context.beginPath()
+context.arc(200, 20, 15, 0, Math.PI * 2)
+context.fill()
+```
+
 
 ## Loops, grid
-loop-in-loop,
-coordinate systems
+loops, loops in loops
 
 ## Variations
 Calcultations
