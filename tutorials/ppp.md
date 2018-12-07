@@ -141,7 +141,7 @@ Writing `rect(10, 10, 50, 50)` is telling the function to start at position `10`
 We can draw more shapes by using a few other functions
 
 A line:
-```
+```javascript
 context.beginPath()
 context.moveTo(100, 0)
 context.lineTo(200, 100)
@@ -149,7 +149,7 @@ context.stroke()
 ```
 
 A triangle:
-```
+```javascript
 context.beginPath()
 context.moveTo(100, 50)
 context.lineTo(125, 100)
@@ -159,7 +159,7 @@ context.stroke()
 ```
 
 A circle:
-```
+```javascript
 context.beginPath()
 context.arc(200, 20, 15, 0, Math.PI * 2)
 context.fill()
