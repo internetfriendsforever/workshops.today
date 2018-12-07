@@ -172,16 +172,16 @@ When programming, it is very useful to be able to tell the computer to do someth
 
 ```javascript
 for (var column = 0; column < 8; column += 1) {
-  
+  console.log(column)
 }
 ```
+
+In your console, you will see that the `console.log` is running eight times, from 0 to 7. In essence, it is a counting machine!
 
 The `for` loop is described in three parts separated by the `;` sign:
 1. Declare a variable called `column` with a start value of `0`
 2. Loop while `column` is less than `8`
 3. At the end of each loop, increment `column` by `1`
-
-In essence, it is a counting machine
 
 With it, we can make eight rectangles in a sequence:
 
@@ -196,7 +196,7 @@ for (var column = 0; column < 8; column += 1) {
 If we make another loop around our first loop, we can make a grid:
 
 ```javascript
-for (var row = 0; row < 4; row += 1) {
+for (var row = 0; row < 7; row += 1) {
   for (var column = 0; column < 8; column += 1) {
     var x = column * 20
     var y = row * 20
@@ -206,8 +206,54 @@ for (var row = 0; row < 4; row += 1) {
 }
 ```
 
-## Variations
-Calcultations
+Now, we have a neat 8x7 grid of black squares!
+
+## Variation
+
+We will use two different ways of adding variation to our grid:
+
+### Calculations
+
+As you may already have noticed, we are defining the position of each black square to be:
+
+```javascript
+var x = column * 20
+var y = row * 20
+```
+
+We make the variable `x` to be whatever `column * 20` is. In order to see what the calculation is, you can log the variable to the console:
+
+```javascript
+console.log(x)
+```
+
+All basic math operators are available to us using the following signs:
+- `+` Add
+- `-` Subtract
+- `*` Multiply
+- `/` Divide
+- `**` Exponent
+- `%` Modulo
+
+There are also several interesting math functions that we can use:
+
+- `Math.random()` — Returns a random number between 0–1. Useful for creating noise
+- `Math.sin(number)` — Returns the sine of a number. Useful for creating waves
+- `Math.round(number)` — Returns the closest whole number of a decimal number
+- `Math.floor(x)`
+- `Math.ceil(x)`
+
+Be creative, experiment with different equations, even if you don't know what you're doing:
+
+```javascript
+var x = column * 20 + Math.sin(row) * 50 + 70
+var y = row * 20
+var size = Math.random() * 10 + 2
+
+context.rect(x, y, size, size)
+```
+
+### If/else
+
 if/else
-math functions: sin, random, floor, math, ceil, modulo, exponents
 
