@@ -166,8 +166,45 @@ context.fill()
 ```
 
 
-## Loops, grid
-loops, loops in loops
+## Loops
+
+When programming, it is very useful to be able to tell the computer to do something many times. Instead of writing it many times over, we can use a `for` loop:
+
+```javascript
+for (var column = 0; column < 8; column += 1) {
+  
+}
+```
+
+The `for` loop is described in three parts separated by the `;` sign:
+1. Declare a variable called `column` with a start value of `0`
+2. Loop while `column` is less than `8`
+3. At the end of each loop, increment `column` by `1`
+
+In essence, it is a counting machine
+
+With it, we can make eight rectangles in a sequence:
+
+```javascript
+for (var column = 0; column < 8; column += 1) {
+  var x = column * 20
+  context.rect(x, 0, 15, 15)
+  context.fill()
+}
+```
+
+If we make another loop around our first loop, we can make a grid:
+
+```javascript
+for (var row = 0; row < 4; row += 1) {
+  for (var column = 0; column < 8; column += 1) {
+    var x = column * 20
+    var y = row * 20
+    context.rect(x, y, 15, 15)
+    context.fill()
+  }
+}
+```
 
 ## Variations
 Calcultations
