@@ -168,7 +168,7 @@ context.fill()
 
 ## Loops
 
-When programming, it is very useful to be able to tell the computer to do something many times. Instead of writing it many times over, we can use a `for` loop:
+When programming, it is very useful to be able to tell the computer to do something many times. Instead of writing it over and over, we can use a `for` loop:
 
 ```javascript
 for (var column = 0; column < 8; column += 1) {
@@ -240,8 +240,8 @@ There are also several interesting math functions that we can use:
 - `Math.random()` — Returns a random number between 0–1. Useful for creating noise
 - `Math.sin(number)` — Returns the sine of a number. Useful for creating waves
 - `Math.round(number)` — Returns the closest whole number of a decimal number
-- `Math.floor(x)`
-- `Math.ceil(x)`
+- `Math.floor(number)` – Rounds *down* to a whole number
+- `Math.ceil(number)` – Rounds *up* to a whole number
 
 Be creative, experiment with different equations, even if you don't know what you're doing:
 
