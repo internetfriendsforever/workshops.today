@@ -269,7 +269,7 @@ if (row < 2) {
 context.fill()
 ```
 
-So, `if` the variable `row` is less than `2`, we draw a rectangle — `else`, we draw a circle.
+So, _if_ the variable `row` is less than `2`, we draw a rectangle — _else_, we draw a circle.
 
 The part `row < 2` is called a _condition_.
 
