@@ -263,7 +263,7 @@ context.beginPath()
 if (row < 2) {
   context.rect(x, y, size, size)
 } else {
-  context.arc(200, 20, 15, 0, Math.PI * 2)
+  context.arc(x, y, size, 0, Math.PI * 2)
 }
 
 context.fill()
@@ -294,3 +294,42 @@ if `row` is less than `2` _and_ `column` is equal to `3`
 if (row === 0 || row === 3)
 ```
 if `row` is equal to `0` _or_ if `row` is equal to `3`
+
+## A complete example
+
+```javascript
+<body>
+  <script>
+    var canvas = document.createElement('canvas')
+    var context = canvas.getContext('2d')
+
+    document.body.appendChild(canvas)
+
+    canvas.width = 500
+    canvas.height = 500
+
+    for (var row = 0; row < 30; row += 1) {
+      for (var column = 0; column < 20; column += 1) {
+        var x = column * 20 + Math.sin(row / 2) * 20 + 10
+        var y = row * 20
+        var width = 10
+        var height = Math.random() * 10
+
+        if (column === 8 || column === 9 || row < 7) {
+          x = x - Math.random() * 70
+        }
+        
+        context.beginPath()
+
+        if (row < 5 || row > 16) {
+          context.rect(x, y, width, height)
+        } else {
+          context.arc(x, y, 2, 0, Math.PI * 2)
+        }
+
+        context.fill()
+      }
+    }
+  </script>
+</body>
+```
