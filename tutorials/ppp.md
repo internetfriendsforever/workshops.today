@@ -214,7 +214,7 @@ We will use two different ways of adding variation to our grid:
 
 ### Calculations
 
-As you may already have noticed, we are defining the position of each black square to be:
+As you may already have noticed, we have defined the position of each black square to be:
 
 ```javascript
 var x = column * 20
@@ -253,7 +253,44 @@ var size = Math.random() * 10 + 2
 context.rect(x, y, size, size)
 ```
 
-### If/else
+### If/else conditions
 
-if/else
+Another way of adding variation is to not always do the same thing:
 
+```
+context.beginPath()
+
+if (row < 2) {
+  context.rect(x, y, size, size)
+} else {
+  context.arc(200, 20, 15, 0, Math.PI * 2)
+}
+
+context.fill()
+```
+
+So, `if` the variable `row` is less than `2`, we draw a rectangle — `else`, we draw a circle.
+
+The part `row < 2` is called a _condition_.
+
+We can use some special symbols in conditions:
+
+- `===` is equal to
+- `<` is less than
+- `>` is greater than
+- `<=` is less than or equal to
+- `>=` is greater than or equal to
+- `&&` which means _and_
+- `||` which means _or_
+
+Other examples:
+
+```
+if (row < 2 && column === 3)
+```
+if `row` is less than `2` _and_ `column` is equal to `3`
+
+```
+if (row === 0 || row === 3)
+```
+if `row` is equal to `0` _or_ if `row` is equal to `3`
