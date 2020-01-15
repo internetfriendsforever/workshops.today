@@ -166,7 +166,7 @@ context.fill()
 ```
 
 
-## Loops
+## Repetition
 
 When programming, it is very useful to be able to tell the computer to do something many times. Instead of writing it over and over, we can use a `for` loop:
 
@@ -294,6 +294,10 @@ if `row` is less than `2` _and_ `column` is equal to `3`
 if (row === 0 || row === 3)
 ```
 if `row` is equal to `0` _or_ if `row` is equal to `3`
+
+## Animation
+
+## Interaction
 
 ## A complete example
 
