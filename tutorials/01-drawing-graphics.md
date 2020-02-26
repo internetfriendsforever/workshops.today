@@ -7,7 +7,7 @@ We will learn how to draw elementary graphic forms (▲ ◼ ●) using HTML and 
 Download and install the following tools on your computer:
 
 - We write code using a _text editor_. You can use any plain text editor. In these tutorials we will be using  [Atom](https://atom.io/).
-- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Google Chrome](https://www.google.com/chrome/). If you've already installed it, make sure it is up-to-date.
+- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/). If you've already installed it, make sure it is up-to-date.
 
 ## Create an HTML document
 
@@ -50,7 +50,7 @@ The `script` element is a special element where we can write programs to dynamic
 
 2. Save
 3. Reload the page in the web browser (nothing happens)
-4. In order to see that the script is actually running, we can use the _console_. In Google Chrome: `View -> Developer -> JavaScript console` (keyboard shortcut `alt + cmd + j`)
+4. In order to see that the script is actually running, we can use the _console_. In Mozilla Firefox: `Tools -> Web Developer -> Web Console` (keyboard shortcut `⌥ + ⌘ + k`)
 5. Write a message to the console:
 ```html
 <body>
