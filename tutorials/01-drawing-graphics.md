@@ -128,11 +128,11 @@ Imagine the `document` to be a building. Inside the building, there are many dif
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
 
-#### Parameters
+#### Arguments
 
-Some functions require special instructions to do their job. In the case of `rect`, it needs to know what position and what size it should be. We give these instructions, or _parameters_ inside the round brackets.
+Some functions require special instructions to do their job. In the case of `rect`, it needs to know what position and what size it should be. We give these instructions, or _arguments_ inside the round brackets.
 
-Parameters need to be sent in order, and for `rect` that happens to be `x, y, width, height`.
+Arguments need to be passed to the function in order, and for `rect` that order happens to be `x, y, width, height`.
 
 Writing `rect(10, 10, 50, 50)` is telling the function to start at position `10`, `10`, and make it `50` wide and `50` tall.
 
