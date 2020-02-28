@@ -38,7 +38,7 @@ canvas.addEventListener('mousedown', function (event) {
 
 Here, we are using a special function called `addEventListener` on our `canvas`. We are passing in two arguments:
 
-- The first argument specifies what type of event to listen for. In this case we are listening for when the mouse pointer is pressed down: this event is called `mousedown`
+- The first argument specifies what type of event to listen for. In this case we are listening for when the mouse pointer is pressed down: this event is called `'mousedown'`
 - The second argument specifies a function that will run every time the event occurs
 
 Let's save our file and reload the page in our browser.
@@ -63,68 +63,58 @@ In order to close the feedback loop, we should react to the user's input. This c
 ```js
 canvas.addEventListener('mousedown', function (event) {
   console.log(event)
-  context.fillRect(event.clientX, event.clientY, 10, 10)
+  context.strokeRect(event.clientX, event.clientY, 10, 10)
 })
 ```
 
-Your program should now draw a black square wherever you press the mouse pointer on the `canvas`. How is this done?
+Your program should now draw a black rectangle wherever you press the mouse pointer on the `canvas`. How is this done?
 
-The event object has lots of information about what just happened. In our example we are using `event.clientX` and `event.clientY` to draw a square where the mouse pointer was pressed.
+The event object has lots of information about what just happened. In our example we are using `event.clientX` and `event.clientY` to draw a rectangle where the mouse pointer was pressed.
 
-Try changing `mousedown` to `mousemove` and see what happens.
+Try changing `'mousedown'` to `'mousemove'` and see what happens.
 
-<!-- There are many types of events, let's try changing `mousedown` to `mousemove` and see what happens. -->
+### Events and values
 
+All [mouse event](https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events) objects can tell us the position of the mouse pointer in relation to the browser window as `event.clientX` and `event.clientY`.
 
+They can also tell us whether the shift, alt, control or command/meta key have been held during the event: `event.shiftKey`, `event.altKey`, `event.ctrlKey`, `event.metaKey`.
 
-<!-- ### Events
+There are other events and values that might be interesting to experiment with:
 
-In the example above we tell the document function `addEventListener` to listen to the `mousedown` event, and then we pass in a second argument which is a new function (that we make up) that will be able to do something every time `mousedown` happens.
+The `'mousedown'` and `'mouseup'`, `'click'` and `'dblclick'` events can tell us which mouse button was pressed with the `event.button` value.
 
-#### What does an event look like?
+The `'wheel'` event can tell us which direction and how much the user scrolled since the last event with the values `event.deltaX` and `event.deltaY`.
 
-If you look closely, you'll see that in our example, we draw a rectangle with `context.fillRect(event.clientX, event.clientY, 10, 10)` but instead of defining the position (`x` and `y`) manually, we are using the values `event.clientX` and `event.clientY` that come from the event.
+### Combining events
 
-We happen to know that these values gives us the current position of the mouse cursor. But maybe the event has other values? Let's look under the hood.
-
-Inside of your event listener function, add our trusty old helper the `console.log()` function, passing `event` as the first argument.
+Using events together can open up for new variations in you program. We could for example change the size of our rectangle when the user scrolls:
 
 ```js
-document.addEventListener('mousedown', function (event) {
-  console.log(event)
-  context.fillRect(event.clientX, event.clientY, 10, 10)
+var size = 5
+
+canvas.addEventListener('mousemove', function (event) {
+  context.strokeRect(event.clientX, event.clientY, size, size)
+})
+
+canvas.addEventListener('wheel', function (event) {
+  size = size + event.deltaY
+
+  context.strokeRect(event.clientX, event.clientY, size, size)
 })
 ```
 
-This will log out the event object in your browser's web inspector, feel free to have a little look at the different values.
+Instead of drawing our rectangle with a fixed size, we are storing the `size` in a variable and using it to draw with.
 
-When you click your mouse again, you'll see that it logs another `event` object to the console. -->
+Every time the `'wheel'` event happens, we are changing the `size` by adding the `event.deltaY` value to it.
 
-## Other types of events
+As we can see in our example, variables enable us to store values and use them in different parts of our program.
 
-There are types of events for touch, keyboard, stylus, sensor, and more, but in this tutorial, we will be focusing on a few mouse-specific events: `mousedown`, `mousemove`, `mouseup` and `wheel`.
+The result now should be a slightly smaller rectangle being drawn on our canvas.
 
-MDN has a [full list of mouse events](https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events) and descriptions.
+By using events, variables and feedback we can create complex interactive systems.
 
-We can try to change our code to listen to the `mousemove` event instead:
 
-```js
-document.addEventListener('mousemove', function (event) {
-  console.log(event)
-  context.fillRect(event.clientX, event.clientY, 10, 10)
-})
-```
-
-Reload your file in the browser. You've made your first drawing program!
-
-From programming drawings, to programming programs for drawing drawings.
-
-## ....
-And for fun, we are also changing the color of our rectangle to sea green by writing `context.fillStyle = 'seagreen'`. This could be any [named color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#colors_table) or a hexadecimal value like '#f00'.
-
-If you refresh the browser you should now be able to draw using the whole window as a surface.
-
-## Drawing with a mirror
+## A complete example
 
 ```html
 <body>
@@ -133,56 +123,40 @@ If you refresh the browser you should now be able to draw using the whole window
     var context = canvas.getContext('2d')
 
     document.body.appendChild(canvas)
-    document.body.style.margin = 0
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
 
-    document.addEventListener('mousemove', function (event) {
-      context.fillStyle = 'seagreen'
-      context.fillRect(event.clientX, event.clientY, 10, 10)
-      context.fillRect(window.innerWidth-event.clientX, event.clientY, 10, 10)
-    })
-  </script>
-</body>
-```
+    canvas.width = 500
+    canvas.height = 500
 
-By drawing two rectangles at the same time, one opposite the other, we create an interesting mirror effect.
+    var x = 0
+    var y = 0
+    var size = 5
+    var circle = false
 
-This affects the way we interact with our program quite a lot. Go to your browser to refresh and try for yourself!
-
-
-
-## More interaction
-
-```html
-<body>
-  <script>
-    var canvas = document.createElement('canvas')
-    var context = canvas.getContext('2d')
-
-    document.body.appendChild(canvas)
-    document.body.style.margin = 0
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    var color = 'seagreen'
-
-    document.addEventListener('mousemove', function (event) {
-      context.fillStyle = color
-      context.fillRect(event.clientX, event.clientY, 10, 10)
-      context.fillRect(window.innerWidth-event.clientX, event.clientY, 10, 10)
-    })
-
-    document.addEventListener('mousedown', function (event) {
-      if (color === 'seagreen') {
-        color = 'black'
+    function draw () {
+      if (circle) {
+        context.beginPath()
+        context.arc(x, y, Math.abs(size), 0, Math.PI * 2)
+        context.stroke()
       } else {
-        color = 'seagreen'
+        context.strokeRect(x, y, size, size)
       }
+    }
+
+    canvas.addEventListener('mousemove', function (event) {
+      x = event.clientX
+      y = event.clientY
+      draw()
+    })
+
+    canvas.addEventListener('wheel', function (event) {
+      size = size + event.deltaY
+      draw()
+    })
+
+    canvas.addEventListener('click', function (event) {
+      circle = !circle
+      draw()
     })
   </script>
 </body>
 ```
-
-
-## What else can you think of?
