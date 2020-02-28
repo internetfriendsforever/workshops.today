@@ -137,9 +137,10 @@ By using events, functions, variables and feedback we can create complex interac
     var context = canvas.getContext('2d')
 
     document.body.appendChild(canvas)
+    document.body.style.margin = 0
 
-    canvas.width = 500
-    canvas.height = 500
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
 
     var x = 0
     var y = 0
