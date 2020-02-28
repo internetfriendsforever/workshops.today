@@ -1,20 +1,20 @@
-# Posters, Patterns, Programs
+# Drawing graphics
 
-We will learn how to draw elementary graphic forms (▲ ◼ ●) using HTML and plain JavaScript
+We will learn how to draw elementary graphic forms (▲ ◼ ●) using HTML and plain JavaScript.
 
 ## Prepare your tools
 
 Download and install the following tools on your computer:
 
 - We write code using a _text editor_. You can use any plain text editor. In these tutorials we will be using  [Atom](https://atom.io/).
-- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Google Chrome](https://www.google.com/chrome/). If you've already installed it, make sure it is up-to-date.
+- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/). If you've already installed it, make sure it is up-to-date.
 
 ## Create an HTML document
 
 1. Make a folder on your computer called `ppp`
 2. Open the folder in the text editor
 3. Create a new file in `ppp` called `index.html`
-  - Right-click `ppp` in the lef-hand column
+  - Right-click `ppp` in the left-hand column
   - Click _New file_
   - Type in `index.html` and press return on your keyboard
 4. Write the following into the right-hand column:
@@ -30,15 +30,15 @@ Download and install the following tools on your computer:
 7. Open the `index.html` file in the web browser
 8. You should see your HTML document presented in the web browser
 
-HTML is code used to describe a document. In it we use a standard set of _elements_. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is static – meaning the document doesn't change by itself. 
+HTML is code used to describe a document. In it we use a standard set of _elements_. An HTML element looks like `<em>this</em>` it has an opening _tag_ and a closing _tag_. Content written in HTML is static – meaning the document doesn't change by itself.
 
 ## Writing our first program
 
-The `script` element is a special element where we can write programs to dynamically change our document while it is open in a browser. These programs are written in a language called JavaScript. With it we can (amongst other things): 
+The `script` element is a special element where we can write programs to dynamically change our document while it is open in a browser. These programs are written in a language called JavaScript. With it we can (amongst other things):
 
 - create and manipulate document elements
 - do calculations
-- listen and react to user interaction 
+- listen and react to user interaction
 
 1. Let's add a `script` element to our document:
 ```html
@@ -50,7 +50,7 @@ The `script` element is a special element where we can write programs to dynamic
 
 2. Save
 3. Reload the page in the web browser (nothing happens)
-4. In order to see that the script is actually running, we can use the _console_. In Google Chrome: `View -> Developer -> JavaScript console` (keyboard shortcut `alt + cmd + j`)
+4. In order to see that the script is actually running, we can use the _console_. In Mozilla Firefox: `Tools -> Web Developer -> Web Console` (keyboard shortcut `⌥ + ⌘ + k`)
 5. Write a message to the console:
 ```html
 <body>
@@ -79,7 +79,7 @@ To make something visual, we will draw on an element called `canvas`. It is a sp
 
 1. Let's create a `canvas` element and add it to our document:
 
-```javascript
+```html
 <body>
   <script>
     var canvas = document.createElement('canvas')
@@ -94,7 +94,7 @@ To make something visual, we will draw on an element called `canvas`. It is a sp
 2. In the console of the browser, mouse over `<canvas />` to see an outline of the element in the document
 3. The `canvas` element has two different ways to draw: `2d` and `webgl`. We will focus on the `2d` context, and fill a rectangle:
 
-```javascript
+```html
 <body>
   <script>
     var canvas = document.createElement('canvas')
@@ -128,15 +128,15 @@ Imagine the `document` to be a building. Inside the building, there are many dif
 
 So, in order to make a _canvas element_ we are using a _function_ called `createElement`, available to us from the omnipresent _document_ object.
 
-#### Parameters
+#### Arguments
 
-Some functions require special instructions to do their job. In the case of `rect`, it needs to know what position and what size it should be. We give these instructions, or _parameters_ inside the round brackets.
+Some functions require special instructions to do their job. In the case of `rect`, it needs to know what position and what size it should be. We give these instructions, or _arguments_ inside the round brackets.
 
-Parameters need to be sent in order, and for `rect` that happens to be `x, y, width, height`. 
+Arguments need to be passed to the function in order, and for `rect` that order happens to be `x, y, width, height`.
 
 Writing `rect(10, 10, 50, 50)` is telling the function to start at position `10`, `10`, and make it `50` wide and `50` tall.
 
-## Drawing more shapes 
+## Drawing more shapes
 
 We can draw more shapes by using a few other functions
 
@@ -257,7 +257,7 @@ context.rect(x, y, size, size)
 
 Another way of adding variation is to not always do the same thing:
 
-```
+```js
 context.beginPath()
 
 if (row < 2) {
@@ -297,7 +297,7 @@ if `row` is equal to `0` _or_ if `row` is equal to `3`
 
 ## A complete example
 
-```javascript
+```html
 <body>
   <script>
     var canvas = document.createElement('canvas')
@@ -318,7 +318,7 @@ if `row` is equal to `0` _or_ if `row` is equal to `3`
         if (column === 8 || column === 9 || row < 7) {
           x = x - Math.random() * 70
         }
-        
+
         context.beginPath()
 
         if (row < 5 || row > 16) {
