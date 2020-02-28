@@ -2,6 +2,7 @@
 
 Building on the previous tutorial [Drawing graphics](01-drawing-graphics.md), we will learn how to make simple interactions (☞☟☜) using HTML and plain JavaScript.
 
+
 ## Our starting point
 
 Create a new HTML document and copy/paste the following code:  
@@ -47,14 +48,6 @@ Every time you press your mouse pointer down on the `canvas`, you should see an 
 
 We've made our first interactive program!
 
-<!-- ## Closing the feedback loop
-
-To make something visual
-
-The next natural step is reacting to the user's input.
-
-To make our program exciting to use.... -->
-
 
 ## Reacting to user input
 
@@ -85,36 +78,57 @@ The `'mousedown'` and `'mouseup'`, `'click'` and `'dblclick'` events can tell us
 
 The `'wheel'` event can tell us which direction and how much the user scrolled since the last event with the values `event.deltaX` and `event.deltaY`.
 
+```js
+canvas.addEventListener('mousemove', function (event) {
+  console.log(event.clientX, event.clientY)
+})
+
+canvas.addEventListener('wheel', function (event) {
+  console.log(event.deltaX, event.deltaY)
+})
+```
+
+When you move your mouse and scroll you should see some values logged out in your developer console.
+
 ### Combining events
 
-Using events together can open up for new variations in you program. We could for example change the size of our rectangle when the user scrolls:
+Using events together can open up for new variations in you program. We can for example change the size of our rectangle when the user scrolls:
 
 ```js
+var x = 0
+var y = 0
 var size = 5
 
+function draw () {
+  context.strokeRect(x, y, size, size)
+}
+
 canvas.addEventListener('mousemove', function (event) {
-  context.strokeRect(event.clientX, event.clientY, size, size)
+  x = event.clientX
+  y = event.clientY
+  draw()
 })
 
 canvas.addEventListener('wheel', function (event) {
   size = size + event.deltaY
-
-  context.strokeRect(event.clientX, event.clientY, size, size)
+  draw()
 })
 ```
 
-Instead of drawing our rectangle with a fixed size, we are storing the `size` in a variable and using it to draw with.
+Since we want to draw both when `'mousemove'` and `'wheel'` happens, we have separated our drawing code into a draw function. We can then tell our program to `draw()` every time each of the events happen.
 
-Every time the `'wheel'` event happens, we are changing the `size` by adding the `event.deltaY` value to it.
+Instead of drawing our rectangle with a fixed size and position, we are storing `size`, `x` and `y` as variables and using them to draw with.
 
-As we can see in our example, variables enable us to store values and use them in different parts of our program.
+Every time the `'wheel'` event happens, we change the `size` by adding the `event.deltaY` value to it. And every time the `'mousemove'` event happens, we are changing the `x` and `y` variables.
 
-The result now should be a slightly smaller rectangle being drawn on our canvas.
-
-By using events, variables and feedback we can create complex interactive systems.
+As we can see in our example:
+- _variables_ enable us to store and use values in different parts of our program
+- _functions_ enable us to group code together and run it in different parts of our program
 
 
 ## A complete example
+
+By using events, functions, variables and feedback we can create complex interactive systems:
 
 ```html
 <body>
