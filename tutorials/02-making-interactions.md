@@ -22,7 +22,7 @@ Create a new HTML document and copy/paste the following code:
 </body>
 ```
 
-Most of this should be familiar to you from based on the previous tutorial. Running the code in your browser should produce a blank `canvas` streched as wide and tall as our browser window.
+Most of this will be familiar to you from based on the previous tutorial. Running the code in your browser should produce a blank `canvas` streched as wide and tall as our browser window.
 
 
 ## Listening for user input
@@ -92,6 +92,10 @@ When you move your mouse and scroll you should see some values logged out in you
 
 ### Combining events
 
+#### Storing values with variables
+
+_variables_ enable us to store and use values in different parts of our program
+
 Using events together can open up for new variations in you program. We can for example change the size of our rectangle when the user scrolls:
 
 ```js
@@ -99,8 +103,39 @@ var x = 0
 var y = 0
 var size = 5
 
-function draw () {
+canvas.addEventListener('mousemove', function (event) {
+  x = event.clientX
+  y = event.clientY
   context.strokeRect(x, y, size, size)
+})
+
+canvas.addEventListener('wheel', function (event) {
+  size = size + event.deltaY
+  context.strokeRect(x, y, size, size)
+})
+```
+
+Every time the `'mousemove'` event happens, we are changing the `x` and `y` variables. And every time the `'wheel'` event happens, we change the `size` by adding the `event.deltaY` value to it.
+
+Since we want to draw the same thing both when `'mousemove'` and `'wheel'` happens, we using the stored variables `size`, `x` and `y` and using them to draw with!
+
+#### Grouping code with functions
+
+_functions_ enable us to group code together and run it in different parts of our program
+
+As soon as we want to draw something more complex, like a circle – it becomes tedious to repeat the drawing code every time you want to draw. We can ‘group’ this code into a reusable _function_.
+
+Let's look at the example below:
+
+```js
+var x = 0
+var y = 0
+var size = 5
+
+function draw () {
+  context.beginPath()
+  context.arc(x, y, Math.abs(size), 0, Math.PI * 2)
+  context.stroke()
 }
 
 canvas.addEventListener('mousemove', function (event) {
@@ -115,15 +150,7 @@ canvas.addEventListener('wheel', function (event) {
 })
 ```
 
-Since we want to draw both when `'mousemove'` and `'wheel'` happens, we have separated our drawing code into a draw function. We can then tell our program to `draw()` every time each of the events happen.
-
-Instead of drawing our rectangle with a fixed size and position, we are storing `size`, `x` and `y` as variables and using them to draw with.
-
-Every time the `'wheel'` event happens, we change the `size` by adding the `event.deltaY` value to it. And every time the `'mousemove'` event happens, we are changing the `x` and `y` variables.
-
-As we can see in our example:
-- _variables_ enable us to store and use values in different parts of our program
-- _functions_ enable us to group code together and run it in different parts of our program
+Here, we have grouped the code into a `draw()` function and instead of writing the three lines for drawing our circle in both the `'mousemove'` and `'wheel'` event, we are calling our function by writing `draw()` which does the drawing for us.
 
 
 ## A complete example
