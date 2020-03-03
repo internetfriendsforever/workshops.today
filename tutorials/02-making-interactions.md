@@ -22,7 +22,7 @@ Create a new HTML document and copy/paste the following code:
 </body>
 ```
 
-Most of this should be familiar to you from based on the previous tutorial. Running the code in your browser should produce a blank `canvas` streched as wide and tall as our browser window.
+Most of this will be familiar to you from based on the previous tutorial. Running the code in your browser should produce a blank `canvas` streched as wide and tall as our browser window.
 
 
 ## Listening for user input
