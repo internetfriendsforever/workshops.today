@@ -1,8 +1,10 @@
 # Animating with time
 
+Building on the previous tutorials [Drawing graphics](01-drawing-graphics.md) and [Making interactions](02-making-interactions.md), we will learn how to animate our programs with time (↻⤸⤾⟳) using HTML and plain JavaScript.
+
 If we introduce the concept of time, or a clock into our program, we can make things move independently of interaction.
 
-A nice way to get a clock tick into your code is a function called `requestAnimationFrame`. This will send in a clock tick as the first argument to your function every time the browser is ready to update. On modern computers this aims to be around every 60th of a second or every ~16.67ms.
+A nice way to get a clock tick into your code is a function called `window.requestAnimationFrame`. This will send in a clock tick as the first argument to your function every time the browser is ready to update. On modern computers this aims to be around every 60th of a second or every ~16.67ms.
 
 ```html
 <body>
