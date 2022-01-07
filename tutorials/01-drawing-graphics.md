@@ -50,7 +50,7 @@ The `script` element is a special element where we can write programs to dynamic
 
 2. Save
 3. Reload the page in the web browser (nothing happens)
-4. In order to see that the script is actually running, we can use the _console_. In Mozilla Firefox: `Tools -> Web Developer -> Web Console` (keyboard shortcut `⌥ + ⌘ + k`)
+4. In order to see that the script is actually running, we can use the _console_. In Google Chrome: `View -> Developer -> JavaScript console` (keyboard shortcut `⌥ + ⌘ + j`)
 5. Write a message to the console:
 ```html
 <body>
