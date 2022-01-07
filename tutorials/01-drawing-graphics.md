@@ -7,7 +7,7 @@ We will learn how to draw elementary graphic forms (▲ ◼ ●) using HTML and 
 Download and install the following tools on your computer:
 
 - We write code using a _text editor_. You can use any plain text editor. In these tutorials we will be using  [Atom](https://atom.io/).
-- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/). If you've already installed it, make sure it is up-to-date.
+- Our programs will run in a _web browser_. You can use any modern web browser, but for this tutorial we are using [Google Chrome](https://www.google.com/chrome/). If you've already installed it, make sure it is up-to-date.
 
 ## Create an HTML document
 
