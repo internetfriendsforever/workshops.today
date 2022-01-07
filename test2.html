@@ -1,0 +1,47 @@
+<body>
+  <script>
+    var canvas = document.createElement('canvas')
+    var context = canvas.getContext('2d')
+
+    document.body.appendChild(canvas)
+    document.body.style.margin = 0
+
+    canvas.width = 500
+    canvas.height = 500
+
+    var step = 0
+    var posx = 250
+    var posy = 250
+    var speed = 1
+    var radius = 10
+
+    function draw () {
+      step++
+
+      var angle = step / 2
+      var distance = Math.cos(step * speed) * 20
+      var x = posx + Math.sin(angle) * distance
+      var y = posy + Math.cos(angle) * distance
+
+      context.beginPath()
+      context.arc(x, y, radius, 0, Math.PI * 2)
+
+      context.fillStyle = 'white'
+      context.strokeStyle = 'black'
+      context.stroke()
+      context.fill()
+
+      if (step === 100) {
+        step = 0
+        speed = Math.random() / 100
+        radius = Math.random() * 20
+        posx = Math.random() * 500
+        posy = Math.random() * 500
+      }
+      
+      window.requestAnimationFrame(draw)
+    }
+
+    draw()
+  </script>
+</body>
