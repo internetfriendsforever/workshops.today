@@ -11,10 +11,10 @@ Download and install the following tools on your computer:
 
 ## Create an HTML document
 
-1. Make a folder on your computer called `ppp`
+1. Make a folder on your computer called `code-drawings`
 2. Open the folder in the text editor
-3. Create a new file in `ppp` called `index.html`
-  - Right-click `ppp` in the left-hand column
+3. Create a new file in `code-drawings` called `index.html`
+  - Right-click `code-drawings` in the left-hand column
   - Click _New file_
   - Type in `index.html` and press return on your keyboard
 4. Write the following into the right-hand column:
@@ -26,7 +26,7 @@ Download and install the following tools on your computer:
 ```
 
 5. Save the file (keyboard shortcut `⌘ + s` on Mac, `ctrl + s` on Windows or Linux)
-6. Go to the `ppp` folder on your computer
+6. Go to the `code-drawings` folder on your computer
 7. Open the `index.html` file in the web browser
 8. You should see your HTML document presented in the web browser
 
